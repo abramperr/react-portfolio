@@ -6,6 +6,9 @@ import reactImage from "../assets/react.png";
 import graphql from "../assets/graphql.png";
 import tailwind from "../assets/tailwind.png";
 import github from "../assets/github.png";
+import linux from "../assets/linux.png";
+import node from "../assets/node.png";
+import sql from "../assets/database.png";
 
 const Experience = () => {
 
@@ -44,6 +47,27 @@ const Experience = () => {
             id:5,
             src:tailwind,
             title:'Tailwind',
+            style:'shadow-sky-500'
+        },
+        {
+            // for linux
+            id:5,
+            src:linux,
+            title:'Linux',
+            style:'shadow-sky-500'
+        },
+        {
+            // for node 
+            id:5,
+            src:sql,
+            title:'SQL',
+            style:'shadow-sky-500'
+        },
+        {
+            // for sql
+            id:5,
+            src:node,
+            title:'Node.js',
             style:'shadow-sky-500'
         },
         {

@@ -7,11 +7,16 @@ const Portfolio = () => {
     const portfolios=[
         {
             id:1,
-            src: portfolio2
+            src: portfolio2,
+            demo:'https://abramperr.github.io/abhijeet_portfolio/',
+            code:'https://github.com/abramperr/abhijeet_portfolio'
         },
         {
             id:2,
-            src: usability
+            src: usability,
+            demo:'https://abramperr.github.io/usability-app-clone/',
+            code:'https://github.com/abramperr/usability-app-clone'
+
         },
         {
             id:3,
@@ -33,8 +38,8 @@ const Portfolio = () => {
                         <div className='shadow-md shadow-gray-600 rounded-lg'>
                             <img className='rounded-md duration-200 hover:scale-105' src={portfolio.src} alt="" />
                             <div className='flex justify-between items-center p-2'>
-                                <button className='w-1/2 px-6 py-3 duration-200 hover:scale-105'>Demo</button>
-                                <button className='w-1/2 px-6 py-3 duration-200 hover:scale-105'>Code</button>
+                                <button className='w-1/2 px-6 py-3 duration-200 hover:scale-105'> <a href={portfolio.demo}>Demo</a></button>
+                                <button className='w-1/2 px-6 py-3 duration-200 hover:scale-105'><a href={portfolio.code}>Code</a></button>
                             </div>
                         </div>
                     )
