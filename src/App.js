@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Portfolio from "./components/Portfolio";
 import SocialLinks from "./components/SocialLinks";
-import Three from '../src/components/Three.jsx';
+
 function App() {
   return (
     <div >
