@@ -17,7 +17,7 @@ const About = () => {
                 <p className='text-xl px-5 flex flex-col '>
                 Currently learning and creating apps using React, Node. Learning express, Mongo DB and aiming to become a full stack web-developer (MERN). Get in Touch with me for more awesome works.  
 
-                <button className=' flex justify-center items-center px-6 my-20 py-3'><a class="lft" href="tel:7978395467" className=''><FiPhone size={30}/> call me </a></button>
+                <button className=' flex justify-center items-center px-6 mt-20 py-3 hover:scale-110 hover:text-cyan-400'><a class="lft" href="tel:7978395467" className=''><FiPhone size={30}/> call me </a></button>
                     </p>
             </div>
         </div>
