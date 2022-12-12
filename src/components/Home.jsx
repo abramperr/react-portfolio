@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-scroll";
 
 import heroImage from '../assets/heroImage.png';
 import{IoIosArrowForward} from "react-icons/io";
@@ -16,12 +17,15 @@ const Home = () => {
                     React, tailwind, JS and eager to learn new technologies and building awesome web-apps  
                 </p>
                 <div className='flex-row'>
+                <Link to='portfolio' smooth duration={500}>
                     <button className=' group text-black w-fit px-6 py-3 my-2
                      flex items-center rounded-md bg-gradient-to-r from-slate-300
                       via-cyan-500 to-blue-500 cursor-pointer'>
                         Portfolio <span className='group-hover:rotate-90 duration-300'> <IoIosArrowForward/> 
+                       
                         </span> 
                     </button>
+                </Link>
                 </div>
             </div>
             <div><img className='rounded-md shadow-md max-h-52  md:max-h-96 md:w-62 md:mx-4 ' src={heroImage} alt="my profile" /></div>
