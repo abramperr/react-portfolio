@@ -1,7 +1,8 @@
 import React from 'react'
-
+import {FiPhone} from "react-icons/fi";
 const About = () => {
   return (
+    
     <div name="about" className='w-full h-screen bg-gradient-to-bl  via-black from-black to-[#810CA8]  text-white'>
         <div className='max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-8 px-5'>
@@ -10,13 +11,14 @@ const About = () => {
 
             <div>
                 <p className='text-xl mt-10 px-5'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dignissimos cupiditate laborum tempora architecto totam nisi reiciendis facere id tenetur repellendus voluptatum nihil molestiae atque exercitationem, reprehenderit quo 
-                    magnam eius iure quod magni. Tempora, itaque nostrum!
+                This is Abhijeet, obsessed with creating responsive and vivid web applications
                 </p>
                 <br/>
-                <p className='text-xl px-5 '>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut sint adipisci tenetur culpa
-                     exercitationem vitae perferendis fugit eveniet labore, soluta consequatur, rerum iure ratione praesentium modi tempore mollitia sed officia quaerat optio? Amet iste neque natus ut, earum magni? Ut exercitationem eaque assumenda consequatur pariatur corrupti quasi quam! Neque, delectus.</p>
+                <p className='text-xl px-5 flex flex-col '>
+                Currently learning and creating apps using React, Node. Learning express, Mongo DB and aiming to become a full stack web-developer (MERN). Get in Touch with me for more awesome works.  
+
+                <button className=' flex justify-center items-center px-6  py-3'><a class="lft" href="tel:7978395467" className=''><FiPhone size={30}/> call me </a></button>
+                    </p>
             </div>
         </div>
     </div>

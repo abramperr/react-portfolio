@@ -8,7 +8,7 @@ const NavBar = () => {
     return (
     <div className="flex bg-black h-20 items-center w-full text-white fixed px-4 justify-between">
         <div>
-            <h1 className='text-5xl font-signature ml-2  hover:scale-110 hover:text-yellow-500'>Abhijeet</h1>
+            <h1 className='text-5xl  signature font-signature ml-2  hover:scale-110 hover:text-yellow-500'>Abhijeet</h1>
         </div>
 
         <ul className=' hidden md:flex  px-2'>
