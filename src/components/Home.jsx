@@ -1,45 +1,47 @@
 import React from 'react';
 import {Link} from "react-scroll";
-
 import heroImage from '../assets/heroImage.png';
 import{IoIosArrowForward} from "react-icons/io";
 import { useState, useEffect } from 'react';
+
 const Home = () => {
     
-    const [loopNum, setLoopNum] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate=["Lerning Full Stack", "Front-End Developement", "Linux", "Database Management","React" ];
     const [text,setText]=useState('');
     const period =2000;
-    const [delta, setDelta] =useState(300 - Math.random()*100)
-
+    const [delta, setDelta] =useState(300 - Math.random()*100);
+    const toRotate=["Learning Full-Stack", "Front-End Developement", "Linux", "Database Management","React" ];
+    const [loopNum, setLoopNum] = useState(0);
+        const [isDeleting, setIsDeleting] = useState(false);
     useEffect(()=>{
+        
+        const tick = () => {
+            let i = loopNum % toRotate.length;
+            let fullText= toRotate[i]
+            let updatedText = isDeleting ? fullText.substring(0, text.length -1) : fullText.substring(0,text.length +1)
+            // setting up condition to delete or append the text const 
+            setText(updatedText);
+    
+            if (isDeleting){
+                setDelta(prevDelta => prevDelta/2)
+            }
+    
+            if (!isDeleting && updatedText === fullText){
+                setIsDeleting(true);
+                setDelta(period);
+            }else if (isDeleting && updatedText === ''){
+                setIsDeleting(false);
+                setLoopNum(loopNum +1);
+                setDelta(300);
+            }
+        }
+        
         const ticker = setInterval(()=>{
             tick();
         },delta)
         return()=>{clearInterval(ticker)};
     },[text])
 
-    const tick = () => {
-        let i = loopNum % toRotate.length;
-        let fullText= toRotate[i]
-        let updatedText = isDeleting ? fullText.substring(0, text.length -1) : fullText.substring(0,text.length +1)
-        // setting up condition to delete or append the text const 
-        setText(updatedText);
-
-        if (isDeleting){
-            setDelta(prevDelta => prevDelta/2)
-        }
-
-        if (!isDeleting && updatedText === fullText){
-            setIsDeleting(true);
-            setDelta(period);
-        }else if (isDeleting && updatedText === ''){
-            setIsDeleting(false);
-            setLoopNum(loopNum +1);
-            setDelta(300);
-        }
-    }
+    
   return (
     <div name="home" className='md:px-20 md:h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 h-screen '>
         {/* <img src={heroImage} alt="" /> */}

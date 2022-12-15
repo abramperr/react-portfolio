@@ -24,14 +24,14 @@ const Portfolio = () => {
         }
     ]
   return (
-    <div name='portfolio' className='bg-gradient-to-tl from-black via-black to-[#2D033B] w-full h-full text-white md:h-screen' >
+    <div name='portfolio' className='bg-gradient-to-tl  from-black via-black to-[#2D033B] w-full h-full text-white md:h-screen' >
 
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-8' >
                 <p className='text-4xl font-bold border-b-4 inline border-b-gray-500' >Portfolio</p>
                 <p className='py-6'>Check out some of my work right here</p>
             </div>
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
+            <div className='grid sm:grid-cols-2 md:justify-center md:align-middle md:grid-cols-3 gap-8 px-12 sm:px-0'>
 
                 {portfolios.map((portfolio)=>{
                     return(
