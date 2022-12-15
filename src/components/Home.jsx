@@ -2,44 +2,45 @@ import React from 'react';
 import {Link} from "react-scroll";
 import heroImage from '../assets/heroImage.png';
 import{IoIosArrowForward} from "react-icons/io";
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 const Home = () => {
     
-    const [text,setText]=useState('');
-    const period =2000;
-    const [delta, setDelta] =useState(300 - Math.random()*100);
-    const toRotate=["Learning Full-Stack", "Front-End Developement", "Linux", "Database Management","React" ];
-    const [loopNum, setLoopNum] = useState(0);
-        const [isDeleting, setIsDeleting] = useState(false);
-    useEffect(()=>{
+    // const [text,setText]=useState('');
+    // const period =2000;
+    // const [delta, setDelta] =useState(300 - Math.random()*100);
+    // const toRotate=["Learning Full-Stack", "Front-End Developement", "Linux", "Database Management","React" ];
+    // const [loopNum, setLoopNum] = useState(0);
+    // const [isDeleting, setIsDeleting] = useState(false);
+
+    // useEffect(()=>{
         
-        const tick = () => {
-            let i = loopNum % toRotate.length;
-            let fullText= toRotate[i]
-            let updatedText = isDeleting ? fullText.substring(0, text.length -1) : fullText.substring(0,text.length +1)
-            // setting up condition to delete or append the text const 
-            setText(updatedText);
+    //     const tick = () => {
+    //         let i = loopNum % toRotate.length;
+    //         let fullText= toRotate[i]
+    //         let updatedText = isDeleting ? fullText.substring(0, text.length -1) : fullText.substring(0,text.length +1)
+    //         // setting up condition to delete or append the text const 
+    //         setText(updatedText);
     
-            if (isDeleting){
-                setDelta(prevDelta => prevDelta/2)
-            }
+    //         if (isDeleting){
+    //             setDelta(prevDelta => prevDelta/2)
+    //         }
     
-            if (!isDeleting && updatedText === fullText){
-                setIsDeleting(true);
-                setDelta(period);
-            }else if (isDeleting && updatedText === ''){
-                setIsDeleting(false);
-                setLoopNum(loopNum +1);
-                setDelta(300);
-            }
-        }
+    //         if (!isDeleting && updatedText === fullText){
+    //             setIsDeleting(true);
+    //             setDelta(period);
+    //         }else if (isDeleting && updatedText === ''){
+    //             setIsDeleting(false);
+    //             setLoopNum(loopNum +1);
+    //             setDelta(300);
+    //         }
+    //     }
         
-        const ticker = setInterval(()=>{
-            tick();
-        },delta)
-        return()=>{clearInterval(ticker)};
-    },[text])
+    //     const ticker = setInterval(()=>{
+    //         tick();
+    //     },delta)
+    //     return()=>{clearInterval(ticker)};
+    // },[text])
 
     
   return (
@@ -48,7 +49,7 @@ const Home = () => {
         <div className=' text-white max-w-screen-lg mx-auto p-10 flex flex-col items-center justify-center h-full px-4 md:flex-row '>
             <div className=' mt-1 md:mt-20 flex flex-col justify-center h-full'>
                 <h2 className='text-4xl sm:text-7xl font-bold'> Hi I am Abhijeet</h2>
-                <h2 className='text-3xl sm:text-5xl font-bold'> Having Interests in <span className='text-cyan-300'>{text}</span> </h2>
+                {/* <h2 className='text-3xl sm:text-5xl font-bold'> Having Interests in <span className='text-cyan-300'>{text}</span> </h2> */}
                 <p className='text-gray-300 py-4 px-2 '>
                     An Aspiring full stack Developer with 1+ years of back-end experience.
 
